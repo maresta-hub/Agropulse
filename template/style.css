@@ -7,22 +7,26 @@
 }
 
 :root {
-  --primary-green: #2e7d32;
-  --light-green: #e8f5e9;
-  --dark-green: #1b5e20;
-  --text-dark: #333333;
-  --text-muted: #666666;
+  --green-dark:  #2d6a4f;  /* teks logo "Agro" */
+  --green-mid:   #52b788;  /* aksen utama */
+  --green-light: #d8f3dc;  /* background card */
+  --orange:      #f4845f;  /* highlight "pulse" */
+  --white:       #ffffff;
+  --dark:        #1b1b2f;  /* overlay video */
+  --glass:       rgba(255, 255, 255, 0.1); /* glassmorphism */
 }
 
 body {
   font-family: "Poppins", sans-serif;
   color: var(--text-dark);
-  height: 4000px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 /* Navbar start */
 .navbar {
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--dark);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -35,7 +39,7 @@ body {
 .navbar .navbar-logo{
     font-size: 1.7rem;
     text-decoration: none;
-    color: var(--text-muted);
+    color: var(--green-dark);
     font-weight: 700;
 }
 
@@ -43,16 +47,18 @@ body {
     max-height: 70px;
     max-width: 70px;
     margin: -20px -1.4rem -10px;
+    background: transparent;
+    filter: drop-shadow(0 0 0 transparan);
 }
 
 .navbar .navbar-logo span{
-    color: var(--primary-green);
+    color: var(--orange);
 }
 
 .navbar .navbar-nav {
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--primary-green);
+  color: var(--dark);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -65,7 +71,7 @@ body {
   gap: 20px;
   list-style: none;
   text-decoration: none;
-  color: var(--text-muted);
+  color: var(--dark);
   font-size: 0.95rem;
   font-weight: 500;
   padding: 6px 12px;
@@ -75,15 +81,15 @@ body {
 
 /* Efek Hover */
 .navbar .navbar-nav a:hover {
-  color: var(--primary-green);
-  background-color: var(--light-green);
+  color: var(--green-mid);
+  background-color: var(--green-light);
 }
 
 .navbar .navbar-nav a::after{
   content: "";
   padding-bottom: 0.3rem;
   display: block;
-  border-bottom: 1px solid var(--primary-green);
+  border-bottom: 1px solid var(--green-mid);
   transform: scaleX(0);
   transition: 0.3s linear;
 }
@@ -93,13 +99,91 @@ body {
 }
 
 .navbar .navbar-extra a{
-    color: var(--text-dark);
+    color: var(--dark);
     margin: 0 0.5rem;
 }
 
 .navbar .navbar-extra a:hover{
-    color: var(--text-muted);
+    color: var(--green-mid);
 }
 
 /* Navbar end */
 
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero .hero-video {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;  
+  z-index: -1;
+}
+
+/* Overlay gelap transparan */
+.hero .hero-overlay {
+  position: fixed;
+  inset: 0;          
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;         /* paling atas dari tiga layer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+
+.hero .hero-content a{
+    text-decoration: none;
+    color: var(--white);
+    padding:1rem 3% 1rem;
+}
+
+/* section sensor card */
+.sensor{
+    position: relative;
+    margin-top: -80px;
+    z-index: 2;
+    background: transparent;
+    padding: 60px 5%;
+}
+
+.sensor .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sensor .row .sensor-card{
+    max-width: 250px;
+  max-height: 400px ;
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);           /* kaca buram */
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--white); 
+  margin: 1rem 2% 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 4rem 3% 2rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
