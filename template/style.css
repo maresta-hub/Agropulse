@@ -1,0 +1,105 @@
+/* style.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary-green: #2e7d32;
+  --light-green: #e8f5e9;
+  --dark-green: #1b5e20;
+  --text-dark: #333333;
+  --text-muted: #666666;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-dark);
+  height: 4000px;
+}
+
+/* Navbar start */
+.navbar {
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+}
+
+.navbar .navbar-logo{
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.navbar .navbar-logo img{
+    max-height: 70px;
+    max-width: 70px;
+    margin: -20px -1.4rem -10px;
+}
+
+.navbar .navbar-logo span{
+    color: var(--primary-green);
+}
+
+.navbar .navbar-nav {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar .navbar-nav a {
+  display: inline-block;
+  text-align: center;
+  gap: 20px;
+  list-style: none;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+/* Efek Hover */
+.navbar .navbar-nav a:hover {
+  color: var(--primary-green);
+  background-color: var(--light-green);
+}
+
+.navbar .navbar-nav a::after{
+  content: "";
+  padding-bottom: 0.3rem;
+  display: block;
+  border-bottom: 1px solid var(--primary-green);
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a{
+    color: var(--text-dark);
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover{
+    color: var(--text-muted);
+}
+
+/* Navbar end */
+
