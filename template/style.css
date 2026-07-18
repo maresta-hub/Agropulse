@@ -187,3 +187,54 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.notifikasi{
+    position: relative;
+    margin-top: -80px;
+    z-index: 2;
+    background: transparent;
+    padding: 60px 5%;
+}
+
+.notifikasi h2{
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  margin: 8rem 7% 3rem;
+
+}
+
+.notifikasi .notif-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.notifikasi .notif-list .notif-items{
+    max-width: 250px;
+  max-height: 400px ;
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);           /* kaca buram */
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--white); 
+  margin: 1rem 2% 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 4rem 3% 2rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notifikasi a{
+    text-decoration: none;
+    color: var(--white);
+    padding:1rem 3% 1rem;
+    display: flex;
+    justify-content: center;
+}
