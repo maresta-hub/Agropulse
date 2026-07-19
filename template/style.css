@@ -184,9 +184,9 @@ body {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .notifikasi{
     position: relative;
     margin-top: -80px;
@@ -227,7 +227,6 @@ body {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -237,4 +236,40 @@ body {
     padding:1rem 3% 1rem;
     display: flex;
     justify-content: center;
+    cursor: pointer;
+}
+
+/* footer */
+footer{
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);           /* kaca buram */
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.5rem 8rem 0;
+  text-align: center;
+  color: var(--white);
+  text-decoration: none;
+}
+
+footer .social{
+  padding: 0.5rem 0;
+}
+
+footer .social a{
+  color: var(--white);
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+footer .social a:hover{
+  color: var(--dark);
+}
+
+footer .credit a{
+  color: var(--white);
+  font-weight: 700;
+}
+
+footer .credit a:hover{
+  color: var(--dark);
+  cursor: pointer;
 }
