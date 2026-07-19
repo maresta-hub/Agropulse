@@ -81,8 +81,9 @@ body {
 
 /* Efek Hover */
 .navbar .navbar-nav a:hover {
-  color: var(--green-mid);
+  color: var(--white);
   background-color: var(--green-light);
+  font-size: 1.1rem;
 }
 
 .navbar .navbar-nav a::after{
@@ -151,6 +152,12 @@ body {
     padding:1rem 3% 1rem;
 }
 
+.hero .hero-content a:hover{
+  font-size: 1.2rem;
+  color: var(--dark);
+  font-weight: 700;
+}
+
 /* section sensor card */
 .sensor{
     position: relative;
@@ -201,6 +208,12 @@ body {
   justify-content: center;
   margin: 8rem 5% 3rem;
 
+}
+
+.notifikasi a:hover{
+  font-size: 1.2rem;
+  color: var(--dark);
+  font-weight: 700;
 }
 
 .notifikasi .notif-list {
@@ -267,9 +280,11 @@ footer .social a:hover{
 footer .credit a{
   color: var(--white);
   font-weight: 700;
+  text-decoration: none;
 }
 
 footer .credit a:hover{
+  font-size: 1.1rem;
   color: var(--dark);
   cursor: pointer;
 }
