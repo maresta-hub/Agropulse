@@ -199,20 +199,20 @@ body {
   color: var(--white);
   display: flex;
   justify-content: center;
-  margin: 8rem 7% 3rem;
+  margin: 8rem 5% 3rem;
 
 }
 
 .notifikasi .notif-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
 .notifikasi .notif-list .notif-items{
-    max-width: 250px;
-  max-height: 400px ;
+  width: 250px;
+  height: 150px ;
   position: relative;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);           /* kaca buram */
@@ -272,4 +272,29 @@ footer .credit a{
 footer .credit a:hover{
   color: var(--dark);
   cursor: pointer;
+}
+
+/* media query */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 85%;
+  }
+}
+/* Tbalet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .notifikasi{
+    flex-wrap: wrap;
+  }
+}
+/* Hamdphone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
 }
