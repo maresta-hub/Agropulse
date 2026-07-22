@@ -26,7 +26,7 @@ body {
 
 /* Navbar start */
 .navbar {
-  border-bottom: 1px solid var(--dark);
+  border-bottom: 1px solid var(--white);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -71,17 +71,18 @@ body {
   gap: 20px;
   list-style: none;
   text-decoration: none;
-  color: var(--dark);
+  color: var(--white);
   font-size: 0.95rem;
   font-weight: 500;
   padding: 6px 12px;
   border-radius: 6px;
   transition: all 0.2s ease;
+  mix-blend-mode: difference;
 }
 
 /* Efek Hover */
 .navbar .navbar-nav a:hover {
-  color: var(--white);
+  color: var(--dark);
   background-color: var(--green-light);
   font-size: 1.1rem;
 }
@@ -100,12 +101,12 @@ body {
 }
 
 .navbar .navbar-extra a{
-    color: var(--dark);
+    color: var(--white);
     margin: 0 0.5rem;
 }
 
 .navbar .navbar-extra a:hover{
-    color: var(--green-mid);
+    color: var(--green-light);
 }
 
 /* Navbar end */
@@ -154,11 +155,11 @@ body {
 
 .hero .hero-content a:hover{
   font-size: 1.2rem;
-  color: var(--dark);
+  color: var(--green-light);
   font-weight: 700;
 }
 
-/* section sensor card */
+/* section sensor card dasboaed*/
 .sensor{
     position: relative;
     margin-top: -80px;
@@ -287,6 +288,46 @@ footer .credit a:hover{
   font-size: 1.1rem;
   color: var(--dark);
   cursor: pointer;
+}
+
+/* Monitoring */
+.monitoring{
+    position: relative;
+    margin-top: -80px;
+    z-index: 2;
+    background: transparent;
+    padding: 80px 5%;
+}
+
+.monitoring .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.monitoring .row .sensor-card{
+  max-width: 300px;
+  max-height: 400px ;
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);           /* kaca buram */
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--white); 
+  margin: 1rem 2% 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 1rem 3% 2rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.monitoring .row .sensor-card span{
+  font-size: 3rem;
 }
 
 /* media query */
